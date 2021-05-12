@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "jsdoc -c jsdoc.json"
+    "docs": "jsdoc -c jsdoc.json",
+    "deploy": "gh-pages -d docs"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,8 @@
   "homepage": "https://github.com/stribesart/Documentacion1#readme",
   "dependencies": {
     "jsdoc": "^3.6.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
