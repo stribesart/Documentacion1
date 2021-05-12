@@ -47,59 +47,6 @@
     <p>Para la organizacion de nuestro proyecto se debe cumplir lo siguiente.</p>
 <p>La carpeta principal se debe llamar igual que el proyecto esto con el fin de que nuestro proyecto sea fácil de identificar.</p>
 <p>Dentro de la carpeta principal se encontra una sola carpeta llamada <strong>publico</strong> al igual que el archivo principal que va a contener toda nuestra estructura <strong>HTML</strong> el cual sera llamado <strong>index.html</strong>.</p>
-<p>Para la creacion de dicho documento lo que podemos hacer es crear la estructura basica, como utilizaremos Visual Studio Code solo podemos poner el simbolo <strong>!</strong> y presionamos la tecla <strong>tab</strong> o <strong>tabulador</strong> y tendremos una estructura como la siguiente:</p>
-<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
-&lt;html lang=&quot;en&quot;>
-&lt;head>
-  &lt;meta charset=&quot;UTF-8&quot;>
-  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
-  &lt;title>Document&lt;/title>
-&lt;/head>
-&lt;body>
-  
-&lt;/body>
-&lt;/html>
-</code></pre>
-<p>Posteriormente hay que identificar bien la <strong>cabecera</strong> y el <strong>cuerpo</strong> los cuales se llaman <strong>head</strong> y <strong>body</strong> respectivamente. Dentro de la cabecera debemos insertar el <a href="">link</a> del cdn de bootstrap (framework que utilizamos para estilos), debemos insertar el <a href="">link</a> del FontAwesomey posteriormente nuestros estilos propios que se encontraran en la carpeta CSS <a href="https://stribesart.github.io/Documentacion/tutorial-estilos.html">ver estilos</a>. Ahora en nuestro body debemos insertar un div &quot;principal&quot;, este div servira para construir dentro de el nuestra pagina, ademas debemos insertar el <a href="">script</a> de Bootstrap, el <a href="">script</a> del Alertify, el <a href="">script</a> de Axios y tendremos una seccion para nuestros scripts personalizados. Nuestro <strong>index.html</strong> quedaria de la siguiente manera:</p>
-<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
-&lt;html lang=&quot;en&quot;>
-&lt;head>
-    &lt;meta charset=&quot;UTF-8&quot;>
-    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
-    
-    &lt;!-- Bootstrap -->
-    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6&quot; crossorigin=&quot;anonymous&quot;>
-
-    &lt;!-- FontAwesome -->
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.15.3/css/all.css&quot; integrity=&quot;sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk&quot; crossorigin=&quot;anonymous&quot;>
-
-    &lt;!-- Estilos Personalizados -->
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;publico/css/estilos.css&quot;>
-
-    &lt;title>Nombre del Proyecto&lt;/title>
-
-&lt;/head>
-&lt;body>
-
-    &lt;div class=&quot;principal&quot; id=&quot;principal&quot;>&lt;/div>
-
-    &lt;!-- Bootstrap -->
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf&quot; crossorigin=&quot;anonymous&quot;>&lt;/script>
-
-    &lt;!-- Alertify -->
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js&quot;>&lt;/script>
-
-    &lt;!-- Axios -->
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;>&lt;/script>
-    
-    &lt;!-- Scripts Personalizados -->
-    &lt;script type=&quot;module&quot; src=&quot;publico/js/script.js&quot;>&lt;/script>
-
-&lt;/body>
-&lt;/html>
-</code></pre>
 <p>Dentro de nuestra carpeta <strong>publico</strong> se encontraran las carpetas relacionadas con la aplicacion, estas serian las carpetas <em>js, css, img/imagenes, etc</em>.</p>
 <p>Dentro de nuestra carpeta <strong>js</strong> deben de ir <strong>todos</strong> los archivos <strong>.js</strong>. Esta carpeta se organizará de la siguiente manera: en la raíz de la carpeta se encontrarán todos los archivos <em>.js</em>, las funciones de componentes dentro de su propia carpeta llamada <strong>componentes</strong>, se creará una carpeta llamada <strong>funciones</strong> en la cual se guardaran todas las funciones relacionadas al framework, se creará una carpeta exclusiva para los módulos del proyecto llamada <strong>aplicación</strong>.</p>
 <p>Dentro de la carpeta <strong>aplicacion</strong> en la raíz de dicha carpeta se encontrarán todas las funciones relacionadas con la aplicación, también se debe crear una carpeta por cada módulo que se cree y cada uno tendrá de raíz dos archivos llamados <strong>módulo.js</strong> y <strong>filtrosModulo.js</strong>.</p>
@@ -140,7 +87,7 @@ guion bajo  significa que es una accion de algo</p>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Wed May 12 2021 12:47:35 GMT-0500 (hora de verano central) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Wed May 12 2021 12:53:08 GMT-0500 (hora de verano central) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

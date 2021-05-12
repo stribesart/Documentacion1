@@ -47,6 +47,59 @@
     <p>Una vez creada nuestra estructura donde ira nuestro proyecto tenemos que definir el nombre del proyecto, para esto se debe consultar con el cliente o con el encargado del proyecto.</p>
 <p>Sustituya el nombre de la carpter <strong>nombreProyecto</strong> por el nombre del proyecto.</p>
 <p>Ahora antes de cualquier cosa debemos que comenzar con nuestra estructura <em>HTML</em> para nuestro sistema, debemos definir con el equipo una estructura para la pagina en general para saber como se va a trabajar la pagina web.</p>
+<p>Para la creacion de dicho documento lo que podemos hacer es crear la estructura basica, como utilizaremos Visual Studio Code solo podemos poner el simbolo <strong>!</strong> y presionamos la tecla <strong>tab</strong> o <strong>tabulador</strong> y tendremos una estructura como la siguiente:</p>
+<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
+&lt;html lang=&quot;en&quot;>
+&lt;head>
+  &lt;meta charset=&quot;UTF-8&quot;>
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+  &lt;title>Document&lt;/title>
+&lt;/head>
+&lt;body>
+  
+&lt;/body>
+&lt;/html>
+</code></pre>
+<p>Posteriormente hay que identificar bien la <strong>cabecera</strong> y el <strong>cuerpo</strong> los cuales se llaman <strong>head</strong> y <strong>body</strong> respectivamente. Dentro de la cabecera debemos insertar el <a href="">link</a> del cdn de bootstrap (framework que utilizamos para estilos), debemos insertar el <a href="">link</a> del FontAwesomey posteriormente nuestros estilos propios que se encontraran en la carpeta CSS <a href="https://stribesart.github.io/Documentacion/tutorial-estilos.html">ver estilos</a>. Ahora en nuestro body debemos insertar un div &quot;principal&quot;, este div servira para construir dentro de el nuestra pagina, ademas debemos insertar el <a href="">script</a> de Bootstrap, el <a href="">script</a> del Alertify, el <a href="">script</a> de Axios y tendremos una seccion para nuestros scripts personalizados. Nuestro <strong>index.html</strong> quedaria de la siguiente manera:</p>
+<pre class="prettyprint source lang-html"><code>&lt;!DOCTYPE html>
+&lt;html lang=&quot;en&quot;>
+&lt;head>
+    &lt;meta charset=&quot;UTF-8&quot;>
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+    
+    &lt;!-- Bootstrap -->
+    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6&quot; crossorigin=&quot;anonymous&quot;>
+
+    &lt;!-- FontAwesome -->
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://use.fontawesome.com/releases/v5.15.3/css/all.css&quot; integrity=&quot;sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk&quot; crossorigin=&quot;anonymous&quot;>
+
+    &lt;!-- Estilos Personalizados -->
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;publico/css/estilos.css&quot;>
+
+    &lt;title>Nombre del Proyecto&lt;/title>
+
+&lt;/head>
+&lt;body>
+
+    &lt;div class=&quot;principal&quot; id=&quot;principal&quot;>&lt;/div>
+
+    &lt;!-- Bootstrap -->
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf&quot; crossorigin=&quot;anonymous&quot;>&lt;/script>
+
+    &lt;!-- Alertify -->
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js&quot;>&lt;/script>
+
+    &lt;!-- Axios -->
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;>&lt;/script>
+    
+    &lt;!-- Scripts Personalizados -->
+    &lt;script type=&quot;module&quot; src=&quot;publico/js/script.js&quot;>&lt;/script>
+
+&lt;/body>
+&lt;/html>
+</code></pre>
 <p>Como sabemos cada pagina debe de manejar una pagina exclusiva de login, esto es con el fin de que nuestros filtros funcionen con la informacion que provee cada usuario, por lo tanto crearemos un archivo html en la raiz de nuestra carpeta <strong>nombreProyecto</strong> llamado <strong>login</strong>, en este archivo vamos a definir nuestra estructura de login normal empezando con el logo o titulo de nuestra empresa o proyecto para saber a donde vamos a ingresar, una caja de texto para un nombre de usuario, correo o numero de empleado, una caja de texto para su contraseña, botones de ingresar, iniciar o entrar y sus botones de recuperar contraseña y si se requiere algun tipo de footer donde se ingresaria informacion extra. Como ya sabemos <em>cada archivo HTML va a llevar su respectivo archivo js</em> entonces crearemos un archivo javascript llamado login. En el archivo login.js crearemos la logica de nuestro login.</p>
 <p><img src="https://github.com/stribesart/Documentacion/blob/main/imagenes/OrganizacionArchivos/loginhtml.jpeg?raw=true" alt="ImagenLogin"></p>
 <p>Dentro del documento index sabemos que hay que poner el Titulo del sitio web o el logotipo, incluso ambas en algunas excepciones pero tambien depende de como se ha definido la estructura con el equipo, tambien sabemos que necesitamos una barra de navegacion, la estructura general que se debe seguir es cargar toda la informacion en la pagina principal, ademas nuestra pagina contendra un menu de lista que nos diga que usuario esta logueado y que opciones tendra ademas de la de cerrar sesion.  Posteriormente en nuestro cuerpo de la pagina debemos divirlo en 3 partes: la parte de los filtros o cabecera del cuerpo de pagina, el cuerpo de pagina que es donde iran toda la informacion que queremos mostrar al usuario, por ultimo un footer o pie de pagina si es que lo requiere el usuario, toda estructura hay que definirla en el archivo <strong>index.html</strong>. Y como ya lo hemos visto tambien crearemos un archivo index.js que es el que le insertara la logica a nuestro proyecto.</p>
@@ -63,7 +116,7 @@
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Wed May 12 2021 12:47:35 GMT-0500 (hora de verano central) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.6</a> on Wed May 12 2021 12:53:08 GMT-0500 (hora de verano central) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
