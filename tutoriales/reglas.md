@@ -83,3 +83,7 @@ Ejemplo:
 ##### Destructuracion
 
 Para las funciones solo se va a enviar un solo parametro llamado json y posteriormente se hra la destructuracion
+
+Si se recibe mas de un solo parametro tiene que ser json, en caso contrario que solo sea un elemento no tiene caso
+
+Por cada variable declarar un const

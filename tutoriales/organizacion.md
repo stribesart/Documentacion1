@@ -17,6 +17,7 @@ De esta manera quedaria ordenado nuestro proyecto, cabe recalcar que es importan
 ## Cambios
 
 ***index.js se cambia a publico/js/index.js***
+
 ***ahora si todos los js van a estar en la carpeta de js***
 
 Creamos nuestro archivo html con su estructura basica
