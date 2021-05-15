@@ -10,14 +10,14 @@ Dentro de nuestra carpeta **js** deben de ir **todos** los archivos **.js**. Est
 
 Dentro de la carpeta **aplicacion** en la raíz de dicha carpeta se encontrarán todas las funciones relacionadas con la aplicación, también se debe crear una carpeta por cada módulo que se cree y cada uno tendrá de raíz dos archivos llamados **módulo.js** y **filtrosModulo.js**.
 
-De esta manera quedaria ordenado nuestro proyecto, cabe recalcar que es importante e incluso necesario verificar que se cumpla al pie de la letra todo el proceso de creacion. A continuacion se encuentra graficamente el ordenamiento de las carpetas y archivos descritos anteriormente:
+De esta manera quedaria ordenado nuestro proyecto, cabe recalcar que es importante e incluso necesario verificar que se cumpla al pie de la letra todo el proceso de creacion, de lo contrario. A continuacion se encuentra graficamente el ordenamiento de las carpetas y archivos descritos anteriormente:
 
 ![OrgProyecto](https://github.com/stribesart/Documentacion/blob/main/imagenes/OrganizacionArchivos/index.jpeg?raw=true)
 
 ## Cambios
 
-index.js se cambia a publico/js/index.js
-ahora si todos los js van a estar en la carpeta de js
+***index.js se cambia a publico/js/index.js***
+***ahora si todos los js van a estar en la carpeta de js***
 
 Creamos nuestro archivo html con su estructura basica
 Insertamos el link de la hoja de estilos en la cabecera
@@ -39,3 +39,7 @@ guion medio significa que es un elemento que depende de
 guion bajo  significa que es una accion de algo
 
 Una variable sera declarada siempre y cuando se modifique la inrformacion de dicha variable, es decir, si se manipulara informacion extra, en caso de que simplemente se regrese dicha variable sin tratar la informacion es sufucuente con que se retorne con comillas invertidas.
+
+### Codigo: 
+Si se recibe mas de un solo parametro tiene que ser json, en caso contrario que solo sea un elemento no tiene caso 
+Por cada variable declarar un const 
