@@ -44,3 +44,5 @@ Una variable sera declarada siempre y cuando se modifique la inrformacion de dic
 ### Codigo: 
 Si se recibe mas de un solo parametro tiene que ser json, en caso contrario que solo sea un elemento no tiene caso 
 Por cada variable declarar un const 
+
+const es para objetos, let es para una sola constante
