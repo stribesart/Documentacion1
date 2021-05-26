@@ -87,3 +87,14 @@ Para las funciones solo se va a enviar un solo parametro llamado json y posterio
 Si se recibe mas de un solo parametro tiene que ser json, en caso contrario que solo sea un elemento no tiene caso.
 
 Por cada variable declarar un const.
+
+
+## Modales
+Las modales no deben de tener el boton de la equis para que se cierren
+
+## Tablas
+Hay que saber que el id sera el ultimo campo del json para la tabla
+si se necesita mostrar el id se va a tener que llamar 2 veces
+
+
+Todo lo que no nos regrese algo del dom es una funcion
