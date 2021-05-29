@@ -1,16 +1,13 @@
 /**
  * Funcion que crea un formulario y agrupa elementos del DOM que recibe como paramentros.
  * @param {json} AJson - Grupo de parametros en formato json que recibe la funcion GrupoFormulario.
- * @param {string} textoEtiqueta - Texto con el que se nombrara al elemento.
- * @param {string} idInput - Id que se va a asociar con la etiqueta.
- * @param {array} contenido - Arreglo de elementos del DOM.
+ * @constant {string} textoEtiqueta - Texto con el que se nombrara al elemento.
+ * @constant {string} idInput - Id que se va a asociar con la etiqueta.
+ * @constant {array} contenido - Arreglo de elementos del DOM.
  * @returns DOMElement
  * @example
- * GrupoFormulario({
- *    textoEtiqueta: "ejemplo",
- *    idInput: "ejemplo",
- *    contenido: [elemento1,elemento2,...,etc.]
- * });
+ * GrupoFormulario(AJson);
+ * const { textoEtiqueta, idInput, contenido} = AJson;
  */
 export function GrupoFormulario(AJson){
   const { textoEtiqueta, idInput, contenido  } = AJson
