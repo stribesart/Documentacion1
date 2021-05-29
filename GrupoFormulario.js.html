@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Home - Documentation</title>
+    <title>GrupoFormulario.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,35 +32,46 @@
 
 <div id="main">
     
+    <h1 class="page-title">GrupoFormulario.js</h1>
+    
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Funcion que crea un formulario y agrupa elementos del DOM que recibe como paramentros.
+ * @param {json} AJson - Grupo de parametros en formato json que recibe la funcion GrupoFormulario.
+ * @returns DOMElement
+ */
+export function GrupoFormulario(AJson){
+  const { textoEtiqueta, idInput, contenido  } = AJson
+  const $grupoFormulario = document.createElement("div");
+  const $etiqueta = document.createElement("label");
+  const $parrafo = document.createElement("p");
+
+  $etiqueta.innerText = textoEtiqueta;
+  $etiqueta.setAttribute("for", idInput);
+
+  $parrafo.className = "error-formulario";
+  $parrafo.id = `error-${idInput}`;
+
+  $grupoFormulario.className = "form-group";
+
+  $grupoFormulario.appendChild($etiqueta);
+  contenido.forEach( elemento => {
+     $grupoFormulario.appendChild(elemento);
+  });
+  $grupoFormulario.appendChild($parrafo);
 
 
-    <section class="package">
-        <h3> </h3>		
+  return $grupoFormulario
+}</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-    
-
-
-
-    <section class="readme usertext">
-        <article><h1>Documentacion1</h1></article>
-    </section>
-
-
 
 
 
