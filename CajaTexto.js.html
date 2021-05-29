@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Tutorial: Desarrollo - Documentation</title>
+    <title>CajaTexto.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,36 +32,48 @@
 
 <div id="main">
     
-    <h1 class="page-title">Tutorial: Desarrollo</h1>
+    <h1 class="page-title">CajaTexto.js</h1>
     
 
+    
+
+
+
+    
     <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Funcion que crea una caja de texto en el DOM, recibe una serie de parametros en formato json.
+ * @param {json} AJson - Grupo de parametros en formato json que recibe la funcion CajaTexto.
+ * @returns DOMElement
+ * @example
+ * CajaTexto({
+ *      name: "ejemplo",
+ *      required: true,
+ *      minlength: 10,
+ *      maxlength: 10,
+ *      placeHolder: "example"
+ * });
+ */
+export function CajaTexto(AJson){
+  const { name, required, minlength, maxlength, placeHolder } = AJson;
 
-<header>
-    
-    <ul>
-        <li><a href="tutorial-paso1.html">Creando el Proyecto</a></li>
-    
-        <li><a href="tutorial-paso2.html">Creando el Login</a></li>
-    
-        <li><a href="tutorial-paso3.html">Creando nuestra Barra de Navegacion</a></li>
-    
-        <li><a href="tutorial-moduloGeneral.html">Crear un Modulo en General</a></li>
-    
-        <li><a href="tutorial-modulo.html">Creando Uniformes</a></li>
-    </ul>
-    
+  const $cajaTexto = document.createElement("input");
+  $cajaTexto.type = "text";
+  $cajaTexto.id = `id-${name}`;
+  $cajaTexto.name = name;
+  if(required)$cajaTexto.required = required;
+  if(minlength != undefined)$cajaTexto.minLength = minlength;
+  if(maxlength != undefined)$cajaTexto.maxLength = maxlength;
+  $cajaTexto.placeholder = placeHolder;
+  return $cajaTexto;
 
-    <h2>Desarrollo</h2>
-</header>
+}</code></pre>
+        </article>
+    </section>
 
-<article>
-    <p>Para nuestro desarrollo de un proyecto nuevo tenemos que leer la documentacion de las funciones que se han implementado. Este seria nuestro primer paso general que debemos hacer asi que, antes de cualquier cosa revisa las funciones que existen.</p>
-<p>Una vez leidas nuestras funciones ahora si podemos continuar con el desarrollo de nuestro proyecto y ahi es donde comenzamos.</p>
-<p>Para esto se han preparado algunos tutoriales de desarrollo. Empezaremos <a href="https://stribesart.github.io/Documentacion/tutorial-paso1.html">Creando el Proyecto</a> posteriormente seguiremos el desarrollo siguiendo los pasos correctamente.</p>
-</article>
 
-</section>
+
 
     
     

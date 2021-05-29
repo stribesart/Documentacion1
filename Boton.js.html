@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>Tutorial: Desarrollo - Documentation</title>
+    <title>Boton.js - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -32,36 +32,48 @@
 
 <div id="main">
     
-    <h1 class="page-title">Tutorial: Desarrollo</h1>
+    <h1 class="page-title">Boton.js</h1>
     
 
+    
+
+
+
+    
     <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Esta funcion Boton crea un Boton en el DOM, recibe una serie de parametros en formato json.
+ * @param {json} AJson - Grupo de parametros en formato json que recibe la funcion Boton.
+ * @returns DOMElement
+ * @example
+ * Boton({
+      textoBoton: 'Ejemplo',
+      claseBoton : 'btn-secondary',
+      idBoton: 'ejemplo',
+      funcionClick : (e)=>{
+        console.log(e.target);
+      }
+    });
+ */
+export function Boton(AJson){
+  const { textoBoton, claseBoton, idBoton, funcionClick } = AJson;
+  const $boton = document.createElement("button");
 
-<header>
-    
-    <ul>
-        <li><a href="tutorial-paso1.html">Creando el Proyecto</a></li>
-    
-        <li><a href="tutorial-paso2.html">Creando el Login</a></li>
-    
-        <li><a href="tutorial-paso3.html">Creando nuestra Barra de Navegacion</a></li>
-    
-        <li><a href="tutorial-moduloGeneral.html">Crear un Modulo en General</a></li>
-    
-        <li><a href="tutorial-modulo.html">Creando Uniformes</a></li>
-    </ul>
-    
+  $boton.innerHTML = textoBoton;
+  $boton.className = `btn ${claseBoton}`;
+  $boton.id = idBoton;
 
-    <h2>Desarrollo</h2>
-</header>
+  live("click", idBoton, funcionClick);
 
-<article>
-    <p>Para nuestro desarrollo de un proyecto nuevo tenemos que leer la documentacion de las funciones que se han implementado. Este seria nuestro primer paso general que debemos hacer asi que, antes de cualquier cosa revisa las funciones que existen.</p>
-<p>Una vez leidas nuestras funciones ahora si podemos continuar con el desarrollo de nuestro proyecto y ahi es donde comenzamos.</p>
-<p>Para esto se han preparado algunos tutoriales de desarrollo. Empezaremos <a href="https://stribesart.github.io/Documentacion/tutorial-paso1.html">Creando el Proyecto</a> posteriormente seguiremos el desarrollo siguiendo los pasos correctamente.</p>
-</article>
+  // $boton.addEventListener("click", funcionClick);
+  return $boton;
+}</code></pre>
+        </article>
+    </section>
 
-</section>
+
+
 
     
     
